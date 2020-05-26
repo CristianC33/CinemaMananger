@@ -7,5 +7,6 @@ namespace CinemaManager.ApplicationLogic.Abstractions
 {
     public interface IFilmRepository: IRepository<Film>
     {
+        Film GetFilmById(Guid Id);
     }
 }

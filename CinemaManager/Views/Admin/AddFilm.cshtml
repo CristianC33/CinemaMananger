@@ -1,0 +1,62 @@
+﻿@using CinemaManager.Models.Admins;
+@using CinemaManager.ApplicationLogic.DataModel;
+@model NewFilmViewModel;
+@{
+    ViewData["Title"] = "AddFilm";
+}
+
+<h1>AddFilm</h1>
+
+<form role="form" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Name" class="form-control" placeholder="Name" />
+        </div>
+        <span asp-validation-for="Name" class"text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="ReleaseDate" class="form-control" placeholder="Release Date" />
+        </div>
+        <span asp-validation-for="ReleaseDate" class"text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Director" class="form-control" placeholder="Director" />
+        </div>
+        <span asp-validation-for="Director" class"text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Duration" class="form-control" placeholder="Duration" />
+        </div>
+        <span asp-validation-for="Duration" class"text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <select asp-for="Genre" asp-items="Html.GetEnumSelectList<Film.GenreCategory>()" class="form-control" placeholder="Select Genre"></select>
+        </div>
+        <span asp-validation-for="Genre" class"text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <select asp-for="Language" asp-items="Html.GetEnumSelectList<Film.LanguageCategory>()" class="form-control" placeholder="Select Language" ></select>
+        </div>
+        <span asp-validation-for="Language" class"text-danger"></span>
+    </div>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary btn-sm">
+                Submit
+            </button>
+        </div>
+    </div>
+</form>
+

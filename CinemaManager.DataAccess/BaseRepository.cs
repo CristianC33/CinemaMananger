@@ -8,11 +8,13 @@ namespace CinemaManager.DataAccess
 {
     public class BaseRepository<T> : IRepository<T> where T : class, new()
     {
-        protected readonly FilmManagerDbContext dbContext;
-        public BaseRepository(FilmManagerDbContext dbContext)
+        protected readonly CinemaManagerDbContext dbContext;
+
+        public BaseRepository(CinemaManagerDbContext dbContext)
         {
             this.dbContext = dbContext;
         }
+
         public T Add(T itemToAdd)
         {
             var entity = dbContext.Add<T>(itemToAdd);

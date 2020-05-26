@@ -1,8 +1,675 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+﻿<div class="main-banner">
+    <div class="banner col-md-8">
+        <section class="slider">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img src="images/IMG1.jpg" class="img-responsive" alt="" />
+                    </li>
+                    <li>
+                        <img src="images/IMG2.jpg" class="img-responsive" alt="" />
+                    </li>
+                    <li>
+                        <img src="images/IMG3.jpg" class="img-responsive" alt="" />
+                    </li>
+                    <li>
+                        <img src="images/IMG4.jpg" class="img-responsive" alt="" />
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <script defer src="js/jquery.flexslider.js"></script>
+        <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+        <script type="text/javascript">
+            $(function () {
+                SyntaxHighlighter.all();
+            });
+            $(window).load(function () {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    start: function (slider) {
+                        $('body').removeClass('loading');
+                    }
+                });
+            });
+        </script>
+    </div>
+    <div class="col-md-4 banner-right">
+        <div class="grid_3 grid_5">
+            <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                <div class="top-movies-in-india">
+                    <h4>Top Movies in Canada</h4>
+                    <ul class="mov_list">
+                        <li>
+                            <i class="fa fa-star"></i>
+                        </li>
+                        <li>93%</li>
+                        <li>
+                            <a href="movie-single.html">Joker (3D)</a>
+                        </li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li>
+                            <i class="fa fa-star"></i>
+                        </li>
+                        <li>91%</li>
+                        <li>
+                            <a href="movie-single.html">Ford v Ferrari (3D)</a>
+                        </li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li>
+                            <i class="fa fa-star"></i>
+                        </li>
+                        <li>89%</li>
+                        <li>
+                            <a href="movie-single.html">Parasite</a>
+                        </li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li>
+                            <i class="fa fa-star"></i>
+                        </li>
+                        <li>85%</li>
+                        <li>
+                            <a href="movie-single.html">Knives Out</a>
+                        </li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li>
+                            <i class="fa fa-star"></i>
+                        </li>
+                        <li>84%</li>
+                        <li>
+                            <a href="movie-single.html">Interstellar</a>
+                        </li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li>
+                            <i class="fa fa-star"></i>
+                        </li>
+                        <li>82%</li>
+                        <li>
+                            <a href="movie-single.html">The Outsider</a>
+                        </li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li>
+                            <i class="fa fa-star"></i>
+                        </li>
+                        <li>81%</li>
+                        <li>
+                            <a href="movie-single.html">Forrest Gump</a>
+                        </li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li>
+                            <i class="fa fa-star"></i>
+                        </li>
+                        <li>81%</li>
+                        <li>
+                            <a href="movie-single.html">Inception</a>
+                        </li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li>
+                            <i class="fa fa-star"></i>
+                        </li>
+                        <li>80%</li>
+                        <li>
+                            <a href="movie-single.html">The Irishman</a>
+                        </li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li>
+                            <i class="fa fa-star"></i>
+                        </li>
+                        <li>79%</li>
+                        <li>
+                            <a href="movie-single.html">Batman : The Dark Knight</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="review-slider">
+    <ul id="flexiselDemo1">
+        <li>
+            <a href="movies.html">
+                <img src="images/r1.jpg" alt="" />
+            </a>
+            <div class="slide-title">
+                <h4>	TED </h4>
+            </div>
+            <div class="date-city">
+                <h5>	Dec 12-15	</h5>
+                <h6>	Cineplex, Galaxy	</h6>
+                <div class="buy-tickets">
+                    <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	BUY TICKETS	</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="movies.html">
+                <img src="images/r2.jpg" alt="" />
+            </a>
+            <div class="slide-title">
+                <h4>	The Vatican Tapes	</h4>
+            </div>
+            <div class="date-city">
+                <h5>	Dec 12-15	</h5>
+                <h6>	Vancity, Galaxy	</h6>
+                <div class="buy-tickets">
+                    <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	BUY TICKETS	</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="movies.html">
+                <img src="images/r3.jpg" alt="" />
+            </a>
+            <div class="slide-title">
+                <h4>	Iron Man IV	</h4>
+            </div>
+            <div class="date-city">
+                <h5>	Dec 12-15	</h5>
+                <h6>	Cineplex, Galaxy	</h6>
+                <div class="buy-tickets">
+                    <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	BUY TICKETS	</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="movies.html">
+                <img src="images/r4.jpg" alt="" />
+            </a>
+            <div class="slide-title">
+                <h4>	Terminator : Genesys	</h4>
+            </div>
+            <div class="date-city">
+                <h5>	Dec 12-15	</h5>
+                <h6>	Galaxy	</h6>
+                <div class="buy-tickets">
+                    <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	BUY TICKETS	</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="movies.html">
+                <img src="images/r5.jpg" alt="" />
+            </a>
+            <div class="slide-title">
+                <h4>	Insidious Chapter III	</h4>
+            </div>
+            <div class="date-city">
+                <h5>	Dec 12-15	</h5>
+                <h6>	Vancity, Cineplex	</h6>
+                <div class="buy-tickets">
+                    <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	BUY TICKETS	</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="movies.html">
+                <img src="images/r6.jpg" alt="" />
+            </a>
+            <div class="slide-title">
+                <h4>	Inside Out	</h4>
+            </div>
+            <div class="date-city">
+                <h5>	Dec 12-15	</h5>
+                <h6>	Vancity	</h6>
+                <div class="buy-tickets">
+                    <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	BUY TICKETS	</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $("#flexiselDemo1").flexisel({
+                visibleItems: 5,
+                animationSpeed: 1000,
+                autoPlay: true,
+                autoPlaySpeed: 3000,
+                pauseOnHover: false,
+                enableResponsiveBreakpoints: true,
+                responsiveBreakpoints: {
+                    portrait: {
+                        changePoint: 480,
+                        visibleItems: 2
+                    },
+                    landscape: {
+                        changePoint: 640,
+                        visibleItems: 3
+                    },
+                    tablet: {
+                        changePoint: 800,
+                        visibleItems: 4
+                    }
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+</div>
+<div class="footer-top-grid">
+    <div class="list-of-movies col-md-8">
+        <div class="tabs">
+            <div class="sap_tabs">
+                <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+                    <ul class="resp-tabs-list">
+                        <li class="resp-tab-item" aria-controls="tab_item-2" role="tab">
+                            <span>	Now Playing	</span>
+                        </li>
+                        <li class="resp-tab-item" aria-controls="tab_item-1" role="tab">
+                            <span>	Opening This Week	</span>
+                        </li>
+                        <li class="resp-tab-item" aria-controls="tab_item-0" role="tab">
+                            <span>	Comming Soon	</span>
+                        </li>
+                        <div class="clearfix"></div>
+                    </ul>
+                    <div class="resp-tabs-container">
+                        <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+                            <ul class="tab_img">
+                                <li>
+                                    <div class="view view-first">
+                                        <a asp-area="" asp-controller="SingleFilm" asp-action="Index">
+                                            <img src="images/IMG6.jpg" class="img-responsive" alt="" />
+                                        </a>
+                                        <div class="info1"></div>
+                                        <div class="mask"></div>
+                                        <div class="tab_desc">
+                                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	Reserve Ticket Now	</a>
+                                            <div class="percentage-w-t-s">
+                                                <h5>	97	</h5>
+                                                <p>
+                                                    %
+                                                    <br> Want to see
+                                                </p>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="view view-first">
+                                        <a asp-area="" asp-controller="SingleFilm" asp-action="Index">
+                                            <img src="images/IMG7.jpg" class="img-responsive" alt="" />
+                                        </a>
+                                        <div class="info1"></div>
+                                        <div class="mask"></div>
+                                        <div class="tab_desc">
+                                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	Reserve Ticket Now	</a>
+                                            <div class="percentage-w-t-s">
+                                                <h5>	98	</h5>
+                                                <p>
+                                                    %
+                                                    <br> Want to see
+                                                </p>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="view view-first">
+                                        <a asp-area="" asp-controller="SingleFilm" asp-action="Index">
+                                            <img src="images/IMG5.jpg" class="img-responsive" alt="" />
+                                        </a>
+                                        <div class="mask">
+                                            <div class="info1"></div>
+                                        </div>
+                                        <div class="tab_desc">
+                                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	Reserve Ticket Now	</a>
+                                            <div class="percentage-w-t-s">
+                                                <h5>	100	</h5>
+                                                <p>
+                                                    %
+                                                    <br> Want to see
+                                                </p>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <div class="clearfix"></div>
+                            </ul>
+                        </div>
+                        <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+                            <ul class="tab_img">
+                                <li>
+                                    <div class="view view-first">
+                                        <a asp-area="" asp-controller="SingleFilm" asp-action="Index">
+                                            <img src="images/IMGE1.jpg" class="img-responsive" alt="" />
+                                        </a>
+                                        <div class="mask">
+                                            <div class="info1"></div>
+                                        </div>
+                                        <div class="tab_desc">
+                                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	Reserve Ticket Now	</a>
+                                            <div class="percentage-w-t-s">
+                                                <h5>	92	</h5>
+                                                <p>
+                                                    %
+                                                    <br> Want to see
+                                                </p>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="view view-first">
+                                        <a asp-area="" asp-controller="SingleFilm" asp-action="Index">
+                                            <img src="images/pic-3.jpg" class="img-responsive" alt="" />
+                                        </a>
+                                        <div class="mask">
+                                            <div class="info1"></div>
+                                        </div>
+                                        <div class="tab_desc">
+                                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	Reserve Ticket Now	</a>
+                                            <div class="percentage-w-t-s">
+                                                <h5>	100	</h5>
+                                                <p>
+                                                    %
+                                                    <br> Want to see
+                                                </p>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="last">
+                                    <div class="view view-first">
+                                        <a asp-area="" asp-controller="SingleFilm" asp-action="Index">
+                                            <img src="images/IMGE2.jpg" class="img-responsive" alt="" />
+                                        </a>
+                                        <div class="mask">
+                                            <div class="info1"></div>
+                                        </div>
+                                        <div class="tab_desc">
+                                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	Reserve Ticket Now	</a>
+                                            <div class="percentage-w-t-s">
+                                                <h5>	74	</h5>
+                                                <p>
+                                                    %
+                                                    <br> Want to see
+                                                </p>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <div class="clearfix"></div>
+                            </ul>
+                        </div>
+                        <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+                            <ul class="tab_img">
+                                <li>
+                                    <div class="view view-first">
+                                        <a asp-area="" asp-controller="SingleFilm" asp-action="Index">
+                                            <img src="images/IMGE3.jpg" class="img-responsive" alt="" />
+                                        </a>
+                                        <div class="mask">
+                                            <div class="info1"></div>
+                                        </div>
+                                        <div class="tab_desc">
+                                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	Reserve Ticket Now	</a>
+                                            <div class="percentage-w-t-s">
+                                                <h5>	88	</h5>
+                                                <p>
+                                                    %
+                                                    <br> Want to see
+                                                </p>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="view view-first">
+                                        <a asp-area="" asp-controller="SingleFilm" asp-action="Index">
+                                            <img src="images/IMGE4.jpg" class="img-responsive" alt="" />
+                                        </a>
+                                        <div class="mask">
+                                            <div class="info1"></div>
+                                        </div>
+                                        <div class="tab_desc">
+                                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	Reserve Ticket Now	</a>
+                                            <div class="percentage-w-t-s">
+                                                <h5>	100	</h5>
+                                                <p>
+                                                    %
+                                                    <br> Want to see
+                                                </p>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="last">
+                                    <div class="view view-first">
+                                        <a asp-area="" asp-controller="SingleFilm" asp-action="Index">
+                                            <img src="images/IMGE5.jpg" class="img-responsive" alt="" />
+                                        </a>
+                                        <div class="mask">
+                                            <div class="info1"></div>
+                                        </div>
+                                        <div class="tab_desc">
+                                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	Reserve Ticket Now	</a>
+                                            <div class="percentage-w-t-s">
+                                                <h5>	90	</h5>
+                                                <p>
+                                                    %
+                                                    <br> Want to see
+                                                </p>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <div class="clearfix"></div>
+                            </ul>
+                        </div>
+                        <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-3">
+                            <ul class="tab_img">
+                                <li>
+                                    <div class="view view-first">
+                                        <a asp-area="" asp-controller="SingleFilm" asp-action="Index">
+                                            <img src="images/pic-6.jpg" class="img-responsive" alt="" />
+                                        </a>
+                                        <div class="mask">
+                                            <div class="info1"></div>
+                                        </div>
+                                        <div class="tab_desc">
+                                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	Buy Ticket	</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="view view-first">
+                                        <a asp-area="" asp-controller="SingleFilm" asp-action="Index">
+                                            <img src="images/pic-1.jpg" class="img-responsive" alt="" />
+                                        </a>
+                                        <div class="mask">
+                                            <div class="info1"></div>
+                                        </div>
+                                        <div class="tab_desc">
+                                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	Buy Ticket	</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="view view-first">
+                                        <a asp-area="" asp-controller="SingleFilm" asp-action="Index">
+                                            <img src="images/pic-9.jpg" class="img-responsive" alt="" />
+                                        </a>
+                                        <div class="mask">
+                                            <div class="info1"></div>
+                                        </div>
+                                        <div class="tab_desc">
+                                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">	Buy Ticket	</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <div class="clearfix"></div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="featured">
+            <h4>Featured</h4>
+            <ul>
+                <li>
+                    <div class="f-movie">
+                        <div class="f-movie-img">
+                            <a href="movies.html">
+                                <img src="images/IMG8.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="f-movie-name">
+                            <a href="movies.html">Inception</a>
+                            <p>Vancity, Cineplex</p>
+                        </div>
+                        <div class="f-buy-tickets">
+                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">BUY TICKETS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="f-movie">
+                        <div class="f-movie-img">
+                            <a href="movies.html">
+                                <img src="images/IMG9.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="f-movie-name">
+                            <a href="movies.html">The Outsider</a>
+                            <p>Vancity, Galaxy</p>
+                        </div>
+                        <div class="f-buy-tickets">
+                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">BUY TICKETS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="f-movie">
+                        <div class="f-movie-img">
+                            <a href="movies.html">
+                                <img src="images/IMG10.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="f-movie-name">
+                            <a href="movies.html">Batman : The Dark Knight </a>
+                            <p>Galaxy, Cineplex</p>
+                        </div>
+                        <div class="f-buy-tickets">
+                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">BUY TICKETS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="f-movie">
+                        <div class="f-movie-img">
+                            <a href="movies.html">
+                                <img src="images/IMG11.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="f-movie-name">
+                            <a href="movies.html">The Irishman</a>
+                            <p>Vancity, Galaxy, Cineplex</p>
+                        </div>
+                        <div class="f-buy-tickets">
+                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">BUY TICKETS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="f-movie">
+                        <div class="f-movie-img">
+                            <a href="movies.html">
+                                <img src="images/IMG12.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="f-movie-name">
+                            <a href="movies.html">Forrest Gump</a>
+                            <p>Cineplex, Vancity</p>
+                        </div>
+                        <div class="f-buy-tickets">
+                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">BUY TICKETS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="f-movie">
+                        <div class="f-movie-img">
+                            <a href="movies.html">
+                                <img src="images/IMG13.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="f-movie-name">
+                            <a href="movies.html">Interstellar</a>
+                            <p>Vancity, Galaxy</p>
+                        </div>
+                        <div class="f-buy-tickets">
+                            <a asp-area="" asp-controller="SingleFilm" asp-action="Index">BUY TICKETS</a>
+                        </div>
+                    </div>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+    <div class="right-side-bar">
+        <div class="quick-pay">
+            <h3>Quick Pay</h3>
+            <p class="payText">
+                Make your online payments a breeze. Save your Credit, Debit Card and NetBanking in your Book MyShow profile.
+                <a href="#">
+                    <br>
+                    Read more
+                </a>
+            </p>
+        </div>
+        <div class="our-blog">
+            <h5>Movie-world News</h5>
+            <div class="post-article">
+                <a href="blog.html" class="post-title">‘Wonder Woman 1984’ Release Pushed Until August, ‘In the Heights’ Postponed Due to Coronavirus Pandemic</a>
+                <i>Posted on March 24, 2020</i>
+                <p>
+                    Warner Bros. is postponing Diana Prince’s return to the big screen. Due to the coronavirus pandemic, “Wonder Woman 1984” will now hit theaters on Aug. 14 instead of June 5...
+                    <br>
+                    <a href="https://variety.com/2020/film/news/wonder-woman-1984-in-the-heights-delayed-coronavirus-1203539795/">See full article at Variety</a>
+                </p>
+            </div>
+            <div class="post-article">
+                <a href="blog.html" class="post-title">SXSW Film Festival Unveils 2020 Winners After Cancellation</a>
+                <i>Posted on March 24, 2020</i>
+                <p>
+                    Though this year’s SXSW was canceled due to the coronavirus pandemic, the film festival held annually in Austin, Texas announced 2020 award winners...
+                    <br>
+                    <a href="https://variety.com/2020/film/news/sxsw-film-festival-winners-coronavirus-1203543164/">See full article at Variety</a>
+                </p>
+            </div>
+            <div class="post-article">
+                <a href="blog.html" class="post-title">‘Bad Boys For Life’ Drives Into Homes Early</a>
+                <i>Posted on March 23, 2020</i>
+                <p>
+                    No shocker here but Sony’s Bad Boys for Life, like several other current theatrical releases of late, will be available in homes as early as March 31 on digital, and on 4K Ultra HD, Blu-Ray,
+                    and DVD on April 21. The film opened on Jan. 17 so technically in regards to its DVD drop, Bad Boys for Life is just outside the 90-day theater-to-dvd window...
+                    <br>
+                    <a href="https://deadline.com/2020/03/bad-boys-for-life-drives-into-homes-early-1202890664/">See full article at Deadline</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
 </div>

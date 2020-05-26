@@ -5,8 +5,8 @@ using System.Text;
 
 namespace CinemaManager.ApplicationLogic.Abstractions
 {
-    public interface IAdminRepository:IRepository<Admin>
+    public interface IAdminRepository : IRepository<Admin>
     {
-        Admin GetAdminByUserId(Guid userId);
+        Admin GetAdminById(Guid Id);
     }
 }

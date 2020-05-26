@@ -9,15 +9,18 @@ namespace CinemaManager.DataAccess
 {
     public class AdminRepository : BaseRepository<Admin>, IAdminRepository
     {
-        public AdminRepository(FilmManagerDbContext dbContext):base(dbContext)
+        public AdminRepository(CinemaManagerDbContext dbContext):base(dbContext)
         {
             
         }
-        public Admin GetAdminByUserId(Guid userId)
+
+        public Admin GetAdminById(Guid Id)
         {
             return dbContext.Admins
-                            .Where(admin => admin.UserId == userId)
+                            .Where(admin => admin.Id == Id)
                             .SingleOrDefault();
         }
+
+
     }
 }

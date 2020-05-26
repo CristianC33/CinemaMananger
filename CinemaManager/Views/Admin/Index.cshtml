@@ -1,0 +1,14 @@
+﻿@model  CinemaManager.Models.Admins.AdminFilmsViewModel;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+@foreach (var film in Model.Film)
+{
+    <div>
+        @film.Name
+    </div>
+}
+
+<a href='@Url.Action("AddFilm", "Admin")'>Add Film</a>
